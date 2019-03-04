@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Styles.Render("~/Content/DashboardPage.css")
+
+<div id="dashboard-title" class="page-header">
+    <div class="dropdown" id="dashboard-dropdown">
+        <div class="dropdown-toggle dropdown-text" data-toggle="dropdown">
+            <span>Dashboard</span><span class="caret"></span>
+        </div>
+        <ul class="dropdown-menu dropdown-addcontent">
+            <li id="dashboardname">Dashboard</li>
+            <li class="divider"></li>
+            <li id="adddashboardtitle">+ ADD Dashboard</li>
+        </ul>
+    </div>
+    <div id="addwidget" data-toggle="collapse" data-target="#widgetmanu">
+        <p>ADD</p>
+    </div>
+</div>
+
+<div class="container collapse" id="widgetmanu">
+    <ul id="widgetlist">
+        <li>line chart</li>
+        <li>sensor</li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <p class="panel-title">@*insert seonsor image*@ Header
+                        <img src="~/Image/IndexPage/setting-gear.png" alt="settingwidget" id="settingwidget">
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                </div>
+                <div class="panel-footer">
+                    <div class="showthing" id="show-sensor">Tem</div>
+                    <div class="showthing" id="show-gateway">gateway</div>
+                </div>  
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <p class="panel-title">@*insert seonsor image*@ Header
+                        <img src="~/Image/IndexPage/setting-gear.png" alt="settingwidget" id="settingwidget">
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                    <p>Panel body</p>
+                </div>
+                <div class="panel-footer">
+                    <div class="showthing" id="show-sensor">Tem</div>
+                    <div class="showthing" id="show-gateway">gateway</div>
+                </div>  
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/jquery-3.3.1.min.js")

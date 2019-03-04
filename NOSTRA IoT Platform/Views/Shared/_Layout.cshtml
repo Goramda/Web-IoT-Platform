@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - NOSTRA IoT Platform</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/Navbar.css")
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="container-fluid setlayout">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="homeicon">
+                    @Html.ActionLink("IoT Platform", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="selectdashboardpage @ViewBag.markdashboard" id="selectpage"><img src="~/Image/Navbar/dash.png" alt="Dashboard" id="imgicon"> @Html.ActionLink("Dashboard", "Index", "Home")</li>
+                    <li class="selecttimelinepage @ViewBag.marktimeline" id="selectpage"><img src="~/Image/Navbar/timeline.png" alt="Timeline" id="imgicon"> @Html.ActionLink("Timeline", "Timeline", "Home")</li>
+                    <li class="selectsensorpage @ViewBag.marksensor" id="selectpage"><img src="~/Image/Navbar/sensor.png" alt="Sensor" id="imgicon"> @Html.ActionLink("Sensor", "Sensor", "Home")</li>
+                    <li class="selectanalysispage @ViewBag.markanalysis" id="selectpage"><img src="~/Image/Navbar/analytics.png" alt="Analysis" id="imgicon"> @Html.ActionLink("Analytsis", "Analysis", "Home")</li>
+                </ul>
+                <div id="language">
+                    <span id="english">EN</span><span>|</span><span id="thailand">TH</span>
+                </div>
+                <div class="dropdown">
+                    <img src="~/Image/Navbar/setting-gear.png" alt="Setting" id="setting" class="dropdown-toggle" data-toggle="dropdown">
+                    <ul class="dropdown-menu dropdown-content">
+                        <li class="subhead">Management</li>
+                        <li id="sitepage">Site Management</li>
+                        <li id="userpage">User Manament</li>
+                        <li id="gatewaypage">Gateway Management</li>
+                        <li id="tagpage">Tag Management</li>
+                        <li id="rulepage">Rule Management</li>
+                        <li class="divider"></li>
+                        <li class="subhead">Profile</li>
+                        <li id="accountpage">Account</li>
+                        <li id="logout">Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer class="container">
+            <p>&copy; @DateTime.Now.Year - NOSTRA</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/Scripts/jquery-3.3.1.min.js")
+    @Scripts.Render("~/Scripts/Navbar.js")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
